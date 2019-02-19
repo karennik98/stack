@@ -1,26 +1,27 @@
 #include "Stack.h"
-template<class T>
-class LStack : public IStack<T>
-{
-public:
-	LStack::LStack() :m_top(nullptr), m_size(0u)
+	template<class T>
+	LStack<T>::LStack() :m_top(nullptr), m_size(0u)
 	{
 	}
-	LStack::~LStack()
+	template<class T>
+	LStack<T>::~LStack()
 	{
 		clear();
 	}
-	virtual void LStack::push(const T& value)
+	template<class T>
+	void LStack<T>::push(const T& value)
 	{
 		Node<T>* top = new Node<T>(value, m_top);
 		++m_size;
 	}
-	virtual const T& LStack::top()const
+	template<class T>
+	const T& LStack<T>::top()const
 	{
 		assert(!empty());
 		return m_top->m_data;
 	}
-	virtual T LStack::pop()
+	template<class T>
+	T LStack<T>::pop()
 	{
 		assert(!empty());
 		Node<T>* top = m_top;
@@ -31,23 +32,21 @@ public:
 		return val;
 
 	}
-	virtual bool LStack::empty()const
+	template<class T>
+	bool LStack<T>::empty()const
 	{
 		return nullptr == top;
 	}
-	virtual size_t LStack::size()const
+	template<class T>
+	unsigned int LStack<T>::size()const
 	{
 		return m_size;
 	}
-	virtual void LStack::clear()
+	template<class T>
+	void LStack<T>::clear()
 	{
 		while (!empty())
 		{
 			pop();
 		}
 	}
-
-private:
-	Node<T>* m_top;
-	size_t m_size;
-};

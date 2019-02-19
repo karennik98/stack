@@ -12,10 +12,10 @@ public:
 	virtual const T& top()const;
 	virtual T pop();
 	virtual bool empty()const;
-	virtual size_t size()const;
+	virtual unsigned int size()const;
 	virtual void clear();
 private:
 	Node<T>* m_top;
-	size_t m_size;
+	unsigned int m_size;
 };
 #endif
