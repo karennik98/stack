@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Stack.h"
+#include "./LStack/Stack.h"
 
 int main()
 {
