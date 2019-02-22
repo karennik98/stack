@@ -10,6 +10,6 @@ public:
 	virtual bool empty()const = 0;
 	virtual unsigned int size()const = 0;
 	virtual void clear() = 0;
-	virtual ~IStack() {};
+	virtual ~IStack() {}
 };
 #endif
