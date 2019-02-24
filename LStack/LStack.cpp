@@ -1,3 +1,4 @@
+#include "LStack.h"
 #include "Stack.h"
 template<class T>
 LStack<T>::LStack() :m_top(nullptr), m_size(0u)
@@ -34,7 +35,7 @@ T LStack<T>::pop()
 template<class T>
 bool LStack<T>::empty()const
 {
-	return nullptr == top;
+	return (nullptr == top);
 }
 template<class T>
 unsigned int LStack<T>::size()const

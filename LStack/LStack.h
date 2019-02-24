@@ -1,6 +1,6 @@
 #ifndef LSTACK_H
 #define LSTACK_H
-#include "ISatck.h"
+#include "IStack.h"
 #include "Node.h"
 template<class T>
 class LStack : public IStack<T>
